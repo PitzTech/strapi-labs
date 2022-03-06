@@ -1,0 +1,37 @@
+{
+	"kind": "collectionType",
+	"collectionName": "games",
+	"info": {
+		"name": "game",
+		"description": ""
+	},
+	"options": {
+		"increments": true,
+		"timestamps": true,
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"unique": true
+		},
+		"description": {
+			"type": "richtext",
+			"required": true
+		},
+		"platform": {
+			"type": "enumeration",
+			"enum": ["Windows", "MacOS", "Linux"]
+		},
+		"gallery": {
+			"collection": "file",
+			"via": "related",
+			"allowedTypes": ["images"],
+			"plugin": "upload",
+			"required": true,
+			"pluginOptions": {}
+		}
+	}
+}
