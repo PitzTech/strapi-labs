@@ -1,3 +1,3 @@
-# Strapi application
+# Strapi application test
 
-A quick description of your strapi application
+A strapi repo to test version 3
